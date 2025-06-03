@@ -12,7 +12,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 50);
 
       // Update active section based on scroll position
-      const sections = ["hero", "projects", "contact"];
+      const sections = ["hero", "projects"];
       const currentSection = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -32,9 +32,8 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "#hero", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    { href: "/sai-portfolio/#hero", label: "About" },
+    { href: "/sai-portfolio/#projects", label: "Projects" },
     { href: "https://drive.google.com/file/d/1oC4YYB9G1oXiSgqEZY6W3c_VLTutKtcm/view?usp=sharing", label: "Download CV", external: true },
   ];
 

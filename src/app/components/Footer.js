@@ -100,7 +100,7 @@ export default function Footer() {
 
         {/* Copyright Notice */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-          <p>© {currentYear} Your Name. All rights reserved.</p>
+          <p>© {currentYear} Sai Akhil Kogilathota. All rights reserved.</p>
           <div className="flex justify-center gap-6 mt-4">
             <a
               href="https://www.linkedin.com/in/alliedbrother/"

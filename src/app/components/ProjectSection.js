@@ -92,7 +92,7 @@ const ProjectSection = () => {
   };
 
   return (
-    <section className="h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="projects" className="min-h-screen py-20">
       <div className="container mx-auto px-4 max-h-[90vh] overflow-y-auto py-8 hide-scrollbar">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 bg-clip-text text-transparent sticky top-0 bg-blue-950/90 py-4">Featured Projects</h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

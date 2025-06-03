@@ -4,12 +4,13 @@ import Navbar from "./components/Navbar";
 import ParticlesBackground from "./ParticlesBackground";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Your Name - Portfolio",
-  description: "Personal portfolio website showcasing my work and experience",
+  title: "Sai Akhil Kogilathota - Portfolio",
+  description: "Data Scientist | ML Engineer | Data Analyst | Business Analyst",
 };
 
 export default function RootLayout({ children }) {
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Contact />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
