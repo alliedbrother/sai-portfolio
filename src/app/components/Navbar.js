@@ -34,7 +34,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/sai-portfolio/#hero", label: "About" },
     { href: "/sai-portfolio/#projects", label: "Projects" },
-    { href: "https://drive.google.com/file/d/1oC4YYB9G1oXiSgqEZY6W3c_VLTutKtcm/view?usp=sharing", label: "Download CV", external: true },
+    { href: "https://drive.google.com/file/d/190TNl6D1iTZvzpQtqJHnRcjCoRkCtPZl/view?usp=sharing", label: "Download CV", external: true },
   ];
 
   return (

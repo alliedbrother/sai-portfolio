@@ -12,7 +12,9 @@ const MainHeroSection = () => {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-blue-950/95 to-blue-900/95 rounded-full backdrop-blur-sm border border-blue-700/50 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] group-hover:border-blue-500/50 transition-all duration-300"></div>
             <span className="relative px-6 py-2 text-base md:text-lg text-white font-medium tracking-tight whitespace-nowrap drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-              Machine Learning is like magic i have a few tricks up my sleeves
+              <span className="text-lg md:text-2xl font-semibold">
+                Machine Learning is like magic i have a few tricks up my sleeves
+              </span>
             </span>
           </div>
         </div>
@@ -63,7 +65,7 @@ const MainHeroSection = () => {
           </motion.a>
 
           <motion.a
-            href="https://twitter.com/saiakhil0034"
+            href="https://x.com/CaptainSai1998"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group p-2"

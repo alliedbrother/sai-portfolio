@@ -1,81 +1,42 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
-  };
-
   return (
-    <section className="h-screen w-full flex items-center justify-center p-4">
+    <section id="contact" className="h-screen w-full flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.6 }}
-        className="max-w-4xl w-full mx-auto bg-gradient-to-r from-blue-900/95 to-blue-800/90 rounded-xl p-8 shadow-md border border-blue-700/30"
+        className="max-w-xl w-full mx-auto bg-gradient-to-r from-blue-900/95 to-blue-800/90 rounded-2xl p-10 shadow-2xl border border-blue-700/40 backdrop-blur-sm text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-8 text-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
-          Get in Touch
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-1">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-2 bg-blue-950/50 border border-blue-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
-              required
-            />
+        <h2 className="text-4xl font-bold mb-8 text-white">Get in Touch</h2>
+
+        <div className="space-y-6 text-left">
+          {/* Email */}
+          <div className="flex items-center gap-4">
+            <Mail className="text-blue-400 w-6 h-6" />
+            <a href="mailto:saikogilathota@gmail.com" className="text-xl text-blue-100 hover:text-blue-300 transition-colors">
+              saikogilathota@gmail.com
+            </a>
           </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-2 bg-blue-950/50 border border-blue-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
-              required
-            />
+
+          {/* Mobile / iMessage */}
+          <div className="flex items-center gap-4">
+            <Phone className="text-blue-400 w-6 h-6" />
+            <span className="text-xl text-blue-100">+1&nbsp;(934)&nbsp;799&nbsp;0867</span>
           </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-1">
-              Message
-            </label>
-            <textarea
-              id="message"
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              rows={4}
-              className="w-full px-4 py-2 bg-blue-950/50 border border-blue-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
-              required
-            ></textarea>
+
+          {/* WhatsApp */}
+          <div className="flex items-center gap-4">
+            <MessageCircle className="text-green-400 w-6 h-6" />
+            <a href="https://wa.me/919901653224" target="_blank" rel="noopener noreferrer" className="text-xl text-blue-100 hover:text-blue-300 transition-colors">
+              +91&nbsp;99016&nbsp;53224 (WhatsApp)
+            </a>
           </div>
-          <div className="text-center">
-            <button
-              type="submit"
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 shadow-lg hover:shadow-blue-500/25"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
+        </div>
       </motion.div>
     </section>
   );

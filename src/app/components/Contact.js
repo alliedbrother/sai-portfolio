@@ -1,38 +1,8 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 
 export default function Contact() {
-  const [formStatus, setFormStatus] = useState("idle"); // idle, submitting, success, error
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setFormStatus("submitting");
-
-    try {
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: e.target.name.value,
-          email: e.target.email.value,
-          message: e.target.message.value,
-        }),
-      });
-
-      if (response.ok) {
-        setFormStatus("success");
-        e.target.reset();
-      } else {
-        setFormStatus("error");
-      }
-    } catch (error) {
-      setFormStatus("error");
-    }
-  };
-
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-gray-900 to-black">
       <div className="container mx-auto px-4">
@@ -41,71 +11,41 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl mx-auto"
+          className="max-w-xl mx-auto text-center bg-gradient-to-br from-blue-900/90 via-blue-800/90 to-blue-900/90 rounded-2xl p-10 shadow-2xl border border-blue-700/40 backdrop-blur-sm"
         >
-          <h2 className="text-4xl font-bold text-center mb-8 text-white">
-            Hit me up !
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-300 mb-2"
+          <h2 className="text-4xl font-bold mb-8 text-white">Get in Touch</h2>
+
+          <div className="space-y-6 text-left">
+            {/* Email */}
+            <div className="flex items-center gap-4">
+              <Mail className="text-blue-400 w-6 h-6" />
+              <a
+                href="mailto:saikogilathota@gmail.com"
+                className="text-xl text-blue-100 hover:text-blue-300 transition-colors"
               >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+                saikogilathota@gmail.com
+              </a>
             </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-300 mb-2"
+
+            {/* Mobile / iMessage */}
+            <div className="flex items-center gap-4">
+              <Phone className="text-blue-400 w-6 h-6" />
+              <span className="text-xl text-blue-100">+1&nbsp;(934)&nbsp;799&nbsp;0867</span>
+            </div>
+
+            {/* WhatsApp */}
+            <div className="flex items-center gap-4">
+              <MessageCircle className="text-green-400 w-6 h-6" />
+              <a
+                href="https://wa.me/919901653224"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl text-blue-100 hover:text-blue-300 transition-colors"
               >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+                +91&nbsp;99016&nbsp;53224 (WhatsApp)
+              </a>
             </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-300 mb-2"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows="4"
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              disabled={formStatus === "submitting"}
-              className="w-full py-3 px-6 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {formStatus === "submitting"
-                ? "Sending..."
-                : formStatus === "success"
-                ? "Message Sent!"
-                : formStatus === "error"
-                ? "Error - Try Again"
-                : "Send Message"}
-            </button>
-          </form>
+          </div>
         </motion.div>
       </div>
     </section>

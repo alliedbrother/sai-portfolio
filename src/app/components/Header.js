@@ -76,7 +76,7 @@ const Navbar = () => {
             ))}
             <li>
               <a
-                href="https://drive.google.com/file/d/1oC4YYB9G1oXiSgqEZY6W3c_VLTutKtcm/view?usp=sharing"
+                href="https://drive.google.com/file/d/190TNl6D1iTZvzpQtqJHnRcjCoRkCtPZl/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group flex items-center justify-center text-xl font-bold transition-all duration-300 px-6 py-2.5 rounded-lg"
