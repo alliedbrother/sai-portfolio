@@ -110,7 +110,7 @@ const ProjectSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-950/90 to-blue-900/90 rounded-xl backdrop-blur-sm border border-blue-700/50 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] group-hover:border-blue-500/50 transition-all duration-300"></div>
               
               {/* Card content */}
-              <div className="relative p-6 flex flex-col h-full">
+              <div className="relative p-6                                                 flex flex-col h-full">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors">{project.title}</h3>
                 <p className="text-gray-200 text-sm mb-4 font-light">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-auto">

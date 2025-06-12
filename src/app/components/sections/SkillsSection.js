@@ -48,8 +48,8 @@ const skillsData = [
       { name: "Classification", icon: <MdOutlineAutoGraph className="text-base text-blue-400" /> },
       { name: "Decision Trees", icon: <FaRegCheckCircle className="text-base text-green-400" /> },
       { name: "Dimension Reduction", icon: <MdOutlineFunctions className="text-base text-purple-400" /> },
-      { name: "Deep Learning", icon: <FaBrain className="text-base text-yellow-400" /> },
-      { name: "CNN", icon: <FaRobot className="text-base text-blue-400" /> },
+      { name: "Boosting Techniques", icon: <FaRegCheckCircle className="text-base text-green-400" /> },
+  
     ],
   },
   {
@@ -91,20 +91,20 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.1 }}
-              className="relative group"
+              className="relative group h-72 flex"
             >
               {/* Card background with glassmorphism */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-950/90 to-blue-900/90 rounded-xl backdrop-blur-sm border border-blue-700/50 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] group-hover:border-blue-500/50 transition-all duration-300"></div>
               
               {/* Card content */}
-              <div className="relative p-6">
+              <div className="relative p-6 flex flex-col w-full overflow-hidden">
                 <div className="flex items-center justify-center mb-4">
                   <div className="p-3 rounded-full bg-blue-800/80 border border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
                     {category.icon}
                   </div>
                 </div>
                 <h2 className="text-2xl font-bold mb-6 text-center text-white">{category.category}</h2>
-                <div className="flex flex-wrap gap-3 justify-center">
+                <div className="flex flex-wrap gap-3 justify-center overflow-y-auto max-h-48 mt-4">
                   {category.skills.map((skill) => (
                     <span
                       key={skill.name}

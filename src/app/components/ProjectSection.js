@@ -6,15 +6,15 @@ import { Github } from "lucide-react";
 import hallucImg from "./images/halluciantion.png";
 import stocksImg from "./images/stocks.png";
 import trialImg from "./images/trial.png";
-import revizeImg from "./images/halluciantion.png";
-import newsImg from "./images/halluciantion.png";
-import kathaImg from "./images/halluciantion.png";
+import revizeImg from "./images/stealth.png";
+import newsImg from "./images/stealth.png";
+import kathaImg from "./images/stealth.png";
 
 const ProjectSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Hallucination Detection in Multimodal Models",
+      title: "Hallu-Detect in VLMs",
       tags: ["EMNLP 2025", "VLMs", " LLaVa", "Probing"],
       description: "A Novel Probing Framework for Hallucination Detection in Multimodal Models without single-token generation",
       fullDescription:
