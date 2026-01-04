@@ -34,6 +34,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/sai-portfolio/#hero", label: "About" },
     { href: "/sai-portfolio/#projects", label: "Projects" },
+    { href: "/sai-portfolio/blogs", label: "Blogs" },
     { href: "https://drive.google.com/file/d/190TNl6D1iTZvzpQtqJHnRcjCoRkCtPZl/view?usp=sharing", label: "Download CV", external: true },
   ];
 

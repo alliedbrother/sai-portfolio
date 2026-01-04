@@ -82,6 +82,26 @@ const MainHeroSection = () => {
             </svg>
           </motion.a>
         </div>
+
+        {/* View Blogs Button */}
+        <motion.a
+          href="/sai-portfolio/blogs"
+          className="relative group mt-6 inline-block"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <div className="absolute inset-0 rounded-xl transition-all duration-300
+            bg-gradient-to-br from-blue-900/95 via-blue-800/95 to-blue-900/95
+            backdrop-blur-md border border-blue-600/50 shadow-[0_8px_32px_0_rgba(30,64,175,0.45)]
+            group-hover:from-blue-800/95 group-hover:via-blue-700/95 group-hover:to-blue-800/95
+            group-hover:border-blue-500/50 group-hover:shadow-[0_0_20px_rgba(29,78,216,0.5)]"></div>
+          <span className="relative z-10 flex items-center gap-2 px-6 py-3 text-blue-100 font-medium group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+            </svg>
+            View My Blogs
+          </span>
+        </motion.a>
       </div>
     </section>
   );

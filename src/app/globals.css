@@ -16,7 +16,6 @@ body {
     rgb(var(--background-end-rgb))
   );
   min-height: 100vh;
-  overflow: hidden; /* Prevent double scrollbars */
 }
 
 .pattern-bg {
@@ -115,4 +114,38 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Custom scrollbar for blog sidebars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(59, 130, 246, 0.3);
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Blog page styles - override section defaults */
+.blog-page section {
+  min-height: auto;
+  scroll-snap-align: unset;
+  scroll-snap-stop: unset;
+}
+
+/* Prose code block styling */
+.prose pre {
+  overflow-x: auto;
+}
+
+.prose code {
+  font-size: 0.875em;
 } 
